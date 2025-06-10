@@ -39,7 +39,5 @@ start/restart mcp_playwright in `settings.json` to verify its running result.
 
 then we should be able to prompt as following:
 
-```
-mcp server already start by docker container, please run following prompt as fresh start:
-go visit `https://github.com/modelcontextprotocol/servers/blob/main/src/fetch/src/mcp_server_fetch` url with playwright, then click current visible text 'server.py' and wait for navigate to its page, then take a screanshot for that page content
-```
+> mcp server already start by docker container, please run following prompt as fresh start:
+> go visit `https://github.com/modelcontextprotocol/servers/blob/main/src/fetch/src/mcp_server_fetch` url with playwright, then click current visible text 'server.py' and wait for navigate to its page, then take a screanshot for that page content

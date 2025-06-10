@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  mcp_playwright:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mcp_playwright:latest
+    container_name: mcp_playwright_container
+    working_dir: /app
+    volumes:
+      - .:/app
+    environment:
+      - SCREENSHOTS_DIR=/app/screenshots
+      - UV_LINK_MODE=copy
+      - UV_CACHE_DIR=/app/.cache
+    command: > 
+      bash -c "
+        mkdir -p /app/.cache &&
+        uv venv &&
+        uv run main.py
+      "
+    tty: true
+    #develop:
+    #  watch:
+    #    - action: restart
+    #      path: .
+    #      target: /app
+    #      ignore: 
+    #        - README.md
+    #        - docker-compose.yml
+    #        - screenshots/

@@ -6,7 +6,6 @@ get_weather, get_forecast, and get_alerts functions. All tests ensure correct
 behavior and output structure for various weather scenarios, without making real
 HTTP requests.
 """
-
 import pytest
 from main import get_weather, get_forecast, get_alerts
 
